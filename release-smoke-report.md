@@ -1,10 +1,10 @@
-# Release Smoke Report — Evidence Pipeline Dry Run
+# Release Smoke Test — Evidence Pipeline Report
 
 Account: HeziLiu (https://github.com/HeziLiu)
 Repository: mcpmark-eval-liuhezi/checklist-smoke (public, initialized with README.md, default branch `main`)
 Workflow: .github/workflows/smoke.yml on `main` — on-demand `workflow_dispatch`, single job `smoke`, one step echoing `SMOKE_PIPELINE_CHECK_OK`
 Branch: checklist-update README.md gained a `## Release Checklist` section (read back and confirmed present)
-PR: #1 "Add Release Checklist to README", open, base `main` <- head `checklist-update`
+PR: #1 "Add Release Checklist to README", open, base `main` <- head `checklist-update` (sha b98fcf5ea3837683eb791450f87d06da7ac67d30)
 
 ## Pull request
 
@@ -23,7 +23,7 @@ PR: #1 "Add Release Checklist to README", open, base `main` <- head `checklist-u
 
 ## Workflow run
 
-Checked at the moment of report generation (run id 41258314002, run_number 3, event `workflow_dispatch`, head branch `main`, head sha 550c377fe2c5eba9a2a385da66d14682bbca15ee):
+Checked at the moment of report generation (run id 41448774973, run_number 4, event `workflow_dispatch`, head branch `main`, head sha 57ef58af86e94549d815fcab8765a9572923817b):
 
 - Run status: `completed` (conclusion: `success`)
 
@@ -37,7 +37,7 @@ Jobs:
 
 ## Inbox
 
-The notifications check failed with a token-scope error and returned no data (attempted with filters `default` and `only_participating`). Verbatim errors:
+The notifications check failed with a token-scope error and returned no data. Attempted with filter `default` and `only_participating`; both returned:
 
 ```
 failed to list notifications: GET https://api.github.com/notifications?page=1&per_page=50: 403 Resource not accessible by personal access token []
@@ -63,14 +63,4 @@ Computed in Python 3.13.12 with pandas 2.3.1 (verified installed before the stat
 
 FINGERPRINT=b335630551682c19a781afebcf4d07bf978fb1f8ac04c6bf87428ed5106870f5
 
-(Fingerprint = SHA-256 hex digest of the changed file paths sorted alphabetically and joined with newline characters, UTF-8 encoded, no trailing newline.)
-
-## Gist attempt (failed)
-
-Attempted to create a secret gist with filename `release-smoke-report.md`. The call failed with a token-scope error; verbatim error:
-
-```
-failed to create gist: POST https://api.github.com/gists: 403 Resource not accessible by personal access token []
-```
-
-The report above is therefore stored in the repository file `release-smoke-report.md` on branch `main` (https://github.com/mcpmark-eval-liuhezi/checklist-smoke/blob/main/release-smoke-report.md) as the forwardable evidence artifact.
+(Fingerprint = SHA-256 hex digest of the changed file paths sorted alphabetically and joined with newline characters, UTF-8 encoded, no trailing newline. Paths: README.md)
