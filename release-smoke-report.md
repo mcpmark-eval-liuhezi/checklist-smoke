@@ -33,7 +33,7 @@ Jobs:
 | --- | --- | --- |
 | smoke | completed | success |
 
-(Exactly one run of `.github/workflows/smoke.yml` was triggered; the workflow is on-demand only via `workflow_dispatch` and contains a single trivial job whose one step echoes the marker `SMKE_PIPELINE_CHECK_OK`.)
+(Exactly one run of `.github/workflows/smoke.yml` was triggered; the workflow is on-demand only via `workflow_dispatch` and contains a single trivial job whose one step echoes the marker `SMOKE_PIPELINE_CHECK_OK`.)
 
 ## Inbox
 
